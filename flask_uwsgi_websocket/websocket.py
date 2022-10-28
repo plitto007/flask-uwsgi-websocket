@@ -136,7 +136,7 @@ class WebSocket(object):
             options.pop('methods')
         provide_automatic_options = False
 
-        rule = Rule(rule, methods=methods, **options)
+        rule = Rule(rule, methods=methods,  websocket=True,**options)
         rule.provide_automatic_options = provide_automatic_options
         self.url_map.add(rule)
         if view_func is not None:
